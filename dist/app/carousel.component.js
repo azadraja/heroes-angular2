@@ -9,18 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
-        this.name = 'Angular';
+var ng_bootstrap_1 = require('@ng-bootstrap/ng-bootstrap');
+var CarouselComponent = (function () {
+    function CarouselComponent(config) {
+        config.interval = 1000;
+        config.wrap = false;
+        config.keyboard = false;
     }
-    AppComponent = __decorate([
+    CarouselComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            template: "\n    <div class=\"container-fluid\">\n    <carousel></carousel>\n  </div>\n  ",
+            selector: 'carousel',
+            templateUrl: './../app/carousel.component.html',
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [ng_bootstrap_1.NgbCarouselConfig])
+    ], CarouselComponent);
+    return CarouselComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.CarouselComponent = CarouselComponent;
+//# sourceMappingURL=carousel.component.js.map
